@@ -8,7 +8,7 @@ import {
 
 import { status, impersonate, options, updatecache } from './commands/administration';
 import { help, hmod, vid, rec } from './commands/standard';
-import { meme, memelist, addmeme, deletememe } from './commands/meme';
+import { meme, memelist, addmeme, deletememe, fetchvitas, vitas } from './commands/meme';
 import { follow, unfollow, followers, following, live } from './commands/follow';
 import { addbadge, editbadge, deletebadge, badgelist, givebadge, takebadge } from './commands/badges';
 import { showmembers } from './commands/members';
@@ -38,4 +38,6 @@ export const Command: { [key:string]: (command:ICommand, msg:Discord.Message) =>
     givebadge: (command:ICommand, msg:Discord.Message) => new CustomCommand(command, msg).execute(givebadge, msg),
     takebadge: (command:ICommand, msg:Discord.Message) => new CustomCommand(command, msg).execute(takebadge, msg),
     showmembers: (command:ICommand, msg:Discord.Message) => new CustomCommand(command, msg).execute(showmembers, msg),
+    vitas: (command:ICommand, msg:Discord.Message) => new CustomCommand(command, msg).execute(vitas, msg),
+    fetchvitas: (command:ICommand, msg:Discord.Message) => new CustomCommand(command, msg).execute(fetchvitas, msg),
 };
