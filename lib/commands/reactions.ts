@@ -5,10 +5,11 @@ import {
 } from './logic';
 
 import { fuck, mega } from './reactions/words';
-import { meme } from '../commands/commands/meme';
+import { meme, vitas } from '../commands/commands/meme';
 
 export const Reaction: { [key:string]: (msg:Discord.Message) => string | void} = {
     fuck: (msg:Discord.Message) => new CustomReaction(msg).execute(fuck, msg),
     mega: (msg:Discord.Message) => new CustomReaction(msg).execute(mega, msg),
     memebers: (msg:Discord.Message) => new CustomReaction(msg).execute(meme, msg),
+    vitas: (msg:Discord.Message) => new CustomReaction(msg).execute(vitas, msg, 'reaction'),
 };

@@ -5,6 +5,8 @@ import { log } from '../log';
 import { createEmbed  } from './helpers';
 
 const streamRoleId = (member:Discord.GuildMember) => {
+    if (!cache["options"])
+        return undefined;
     const streamRoleName = cache["options"].find(option => option.option === 'role_stream')
         ? cache["options"].find(option => option.option === 'role_stream').value
         : undefined;
