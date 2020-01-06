@@ -26,6 +26,7 @@
     "axios": ">=0.18.1",
     "compromise": "^12.2.1",
     "discord.js": "^11.4.2",
+    "markov-strings": "^2.1.0",
     "mongodb": "^3.2.3",
     "rimraf": "^2.6.3"
   },
